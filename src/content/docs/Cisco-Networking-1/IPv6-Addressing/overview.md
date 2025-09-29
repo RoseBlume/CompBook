@@ -1,5 +1,5 @@
 ---
-title: Cisco Networking 1
+title: IPv6 Overview
 description: Overview
 sidebar:
     order: 0
