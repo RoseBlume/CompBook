@@ -12,6 +12,10 @@ export default defineConfig({
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
 			sidebar: [
 				{
+					label: "Overview",
+					slug: "overview"
+				},
+				{
 					label: 'Cisco Networking 1',
 					collapsed: true,
 					items: [
