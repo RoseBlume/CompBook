@@ -1,0 +1,44 @@
+name: Deploy to GitHub Pages
+
+on:
+  # Trigger the workflow every time you push to the `main` branch
+  # Using a different branch name? Replace `main` with your branch’s name
+  push:
+    branches: [ main]
+  # Allows you to run this workflow manually from the Actions tab on GitHub.
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout your repository using git
+        uses: actions/checkout@v4
+      
+      - name: Install NPM
+        uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+          cache: 'npm' # Set this to npm, npm or pnpm.
+      
+      - name: Install frontend dependencies
+        run: npm install
+      
+      # This will build a pdf to the public/_pdf directory
+      - name: Build the PDF
+        run: npm run pdf
+      
+      - name: Release the PDF
+        - uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: "BookV1"
+          prerelease: true
+          title: "Book Ongoing Release"
+          files: |
+            public/_pdf/Book.pdf
