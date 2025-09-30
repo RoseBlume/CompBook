@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Build and Release Book PDF
 
 on:
   # Trigger the workflow every time you push to the `main` branch
@@ -34,7 +34,7 @@ jobs:
         run: npm run pdf
       
       - name: Release the PDF
-        - uses: "marvinpinto/action-automatic-releases@latest"
+        uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           automatic_release_tag: "BookV1"
