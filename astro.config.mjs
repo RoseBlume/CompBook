@@ -107,9 +107,93 @@ export default defineConfig({
 					]
 				},
 				{
+					label: 'It Essentials 1',
+					collapsed: true,
+					items: [
+						{
+							label: "Introduction to PC Hardware",
+							autogenerate: {directory: "It-Essentials-1/Introduction-To-PC-Hardware"},
+							collapsed: true,
+						},
+						{
+							label: "PC Assembly",
+							autogenerate: {directory: "It-Essentials-1/PC-Assembly"},
+						},
+						{
+							label: "Advanced Computer Hardware",
+							autogenerate: {directory: "It-Essentials-1/Advanced-Computer-Hardware"},
+							collapsed: true,
+						},
+						{
+							label: "Preventive Maintenance and Troubleshooting",
+							autogenerate: {directory: "It-Essentials-1/Preventive-Maintenance-and-Troubleshooting"},
+							collapsed: true,
+						},
+						{
+							label: "Networking Concepts",
+							autogenerate: {directory: "It-Essentials-1/Networking-Concepts"},
+							collapsed: true,
+						},
+						{
+							label: "Applied Networking",
+							autogenerate: {directory: "It-Essentials-1/Applied-Networking"},
+							collapsed: true,
+						},
+						{
+							label: "Laptops and Other Mobile Devices",
+							autogenerate: {directory: "It-Essentials-1/Laptops-and-Other-Mobile-Devices"},
+							collapsed: true,
+						},
+						{
+							label: "Printers",
+							autogenerate: {directory: "It-Essentials-1/Printers"},
+							collapsed: true,
+						},
+						{
+							label: "Virtualization and Cloud Computing",
+							autogenerate: {directory: "It-Essentials-1/Virtualization-and-Cloud-Computing"},
+							collapsed: true,
+						},
+						{
+							label: "Windows Installation",
+							autogenerate: {directory: "It-Essentials-1/Windows-Installation"},
+							collapsed: true,
+						},
+						{
+							label: "Windows Configuration",
+							autogenerate: {directory: "It-Essentials-1/Windows-Configuration"},
+							collapsed: true,
+						},
+						{
+							label: "Mobile Linux and macOS Operating Systems",
+							autogenerate: {directory: "It-Essentials-1/Mobile-Linux-and-macOS-Operating-Systems"},
+							collapsed: true,
+						},
+						{
+							label: "Security",
+							autogenerate: {directory: "It-Essentials-1/Security"},
+							collapsed: true,
+						},
+						{
+							label: "The IT Professional",
+							autogenerate: {directory: "It-Essentials-1/The-IT-Professional"},
+							collapsed: true,
+						}
+					]
+				},
+				{
+					label: "Introduction to Computer Programming",
+					collapsed: true,
+					autogenerate: { directory: "Intro-To-Computer-Programming"}
+				},
+				{
+					label: "Health and Safety",
+					collapsed: true,
+					autogenerate: {directory: "Health-And-Safety"}
+				},
+				{
 					label: 'Guides',
 					items: [
-						// Each item here is one entry in the navigation menu.
 						{ label: 'Example Guide', slug: 'guides/example' },
 					],
 				},
